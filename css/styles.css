@@ -7,14 +7,10 @@ html {
   font-size: 16px;
 }
 header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
   background-color: #212a23;
-  width: 20%;
-  padding: 20px 15px;
   color: #ffffff;
+  width: 100%;
+  padding: 10px 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,21 +23,100 @@ main > div {
   height: 100vh;
   width: 100%;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey; 
+  /* border-radius: 10px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #212a23;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .container-principal {
   width: 70%;
+  padding: 30px 50px;
+  overflow-y: auto;
+}
+.container-principal section {
+  margin: 20px 0;
+}
+.container-principal section h2 {
+  margin-bottom: 20px;
+}
+.container-card-news {
+  display: flex;
+  justify-content: space-between;
+}
+.card-news {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 20px 20px;
+  height: 300px;
+}
+.card-news img {
+  width: 100%;
+}
+.card-news a,
+.card-news-big a {
+  color: #00be2a;
+}
+.card-news-big {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  margin: 10px 0;
+}
+.card-news-big .title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.card-news-big a {
+  text-align: right;
+  font-size: 1.3rem;
 }
 .container-propaganda {
   width: 30%;
   background-color: #efefef;
+  overflow-y: auto;
 }
-header .content-top-title {
-  text-align: center;
+.container-propaganda-primaria article {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
+.container-propaganda-primaria article div {  
+  background-color: #fff;
+  width: 70%;
+  padding: 10px;
+}
+.container-propaganda-primaria article img{
+  width: 100%;
+}
+
 header .content-top-title h1 {
-  font-size: 4rem;
+  font-size: 1.5rem;
 }
 header .content-top-title h2 {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 header hr {
   border-color: #fff;
@@ -51,7 +126,6 @@ header nav {
   padding: 15px;
   display: flex;
   flex-direction: column;
-
 }
 header nav a {
   color: #fff;
@@ -63,7 +137,54 @@ header nav a {
 header nav a:hover {
   color: #00be2a;
 }
-header .content-bottom{
+header .content-top-title {
+  display: flex;
+}
+header .content-bottom {
   font-size: 1rem;
   text-align: center;
+  display: none;
+}
+header nav, header hr {
+  display: none;
+}
+header .content-top-title img {
+  margin-right: 20px;
+}
+@media only screen and (min-width: 600px){
+
+}
+@media only screen and (min-width: 992px){
+  header .content-top-title img {
+    display: none;
+  }
+  header nav, 
+  header hr,
+  header .content-bottom {
+    display: block;
+  }
+  header .content-top-title h1 {
+    font-size: 4rem;
+  }
+  header .content-top-title h2 {
+    font-size: 2rem;
+  }
+  header .content-top-title {
+    text-align: center;
+    display: block;
+  }
+  header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 20%;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1200px){
+  
 }
