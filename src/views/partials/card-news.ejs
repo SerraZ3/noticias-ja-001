@@ -1,0 +1,16 @@
+<% for(let itemNews of news){ %>
+<section>
+  <h2><%= itemNews.title %></h2>
+  <div class="container-card-news">
+    <% for(let itemContent of itemNews.content){ %>
+    <article class="card-news">
+      <div>
+        <img src="<%= itemContent.img %>" alt="saúde" />
+        <span><%= itemContent.description %></span>
+      </div>
+      <a href="<%= itemContent.redirect %>">Ver mais</a>
+    </article>
+    <% }%>
+  </div>
+</section>
+<%} %>
