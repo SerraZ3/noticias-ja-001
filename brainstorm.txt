@@ -1,0 +1,26 @@
+news (notícias)
+- title
+- subtitle
+- article
+- author
+- created_at
+- updated_at
+- image
+- category
+
+images
+- path
+- size
+- extension
+- created_at
+- updated_at
+
+categories
+- name
+- description
+- created_at
+- updated_at
+
+
+Criar rota para adicionar noticia
+Ler/listar noticia

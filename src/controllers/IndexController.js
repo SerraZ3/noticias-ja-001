@@ -32,13 +32,18 @@ const news = [
         description: "Lorem ipsum dolor sit, amet consectetur",
         redirect: "http://google.com",
       },
-    ]
+      {
+        img: "/img/agricultura.jpg",
+        description: "Lorem ipsum dolor sit, amet consectetur",
+        redirect: "http://google.com",
+      },
+    ],
   },
 ];
 const indexController = {
   home: (req, res) => {
     res.render("index", {
-      news
+      news,
     });
   },
 };
